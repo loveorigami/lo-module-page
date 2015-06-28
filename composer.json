@@ -1,5 +1,5 @@
 {
-    "name": "loveorigami/lo-page-module",
+    "name": "loveorigami/lo-module-page",
     "description": "Page module for Lo-CMS",
     "version": "2.1",
     "type": "yii2-module",
@@ -8,7 +8,7 @@
         "page",
         "module"
     ],
-    "homepage": "https://bitbucket.org/loveorigami/lo-page-module",
+    "homepage": "https://bitbucket.org/loveorigami/lo-module-page",
     "time": "2015-06-27",
     "license": "MIT",
     "authors": [
@@ -20,7 +20,7 @@
         }
     ],
     "support": {
-        "source": "https://bitbucket.org/loveorigami/lo-page-module"
+        "source": "https://bitbucket.org/loveorigami/lo-module-page"
     },
     "require": {
         "yiisoft/yii2": "~2"
