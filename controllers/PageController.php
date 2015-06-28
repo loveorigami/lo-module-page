@@ -8,7 +8,7 @@
 
 namespace lo\modules\page\controllers;
 
-use lo\models\Page;
+use lo\modules\page\models\Page;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 
@@ -16,7 +16,7 @@ use yii\web\NotFoundHttpException;
 class PageController extends Controller
 {
     public function actionView($slug){
-        $model = Page::find()->where(['slug'=>$slug)->published()->one();
+        $model = Page::find()->where(['slug'=>$slug])->published()->one();
         if(!$model){
             throw new NotFoundHttpException(\Yii::t('frontend', 'Page not found'));
         }
