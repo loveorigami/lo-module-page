@@ -1,5 +1,5 @@
 <?php
-namespace lo\modules\page\models\meta;
+namespace lo\modules\page\meta;
 
 use Yii;
 use common\db\MetaFields;

@@ -5,7 +5,7 @@ namespace lo\modules\page\models;
 use Yii;
 use yii\behaviors\SluggableBehavior;
 
-use lo\modules\page\models\meta\PageMeta;
+use lo\modules\page\meta\PageMeta;
 
 /**
  * This is the model class for table "page".
