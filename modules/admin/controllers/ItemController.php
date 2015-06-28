@@ -10,7 +10,7 @@ use common\actions\crud;
 /**
  * PageController implements the CRUD actions for Page model.
  */
-class PageController extends Controller
+class ItemController extends Controller
 {
     /**
      * Действия
