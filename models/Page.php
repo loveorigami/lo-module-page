@@ -48,14 +48,14 @@ class Page extends \common\db\ActiveRecord
      */
     public function behaviors()
     {
-        return [
-            'slug'=>[
-                'class'=>SluggableBehavior::className(),
-                'attribute'=>'name',
-                'ensureUnique'=>true,
-                'immutable'=>true
-            ],
+        $arr = parent::behaviors();
+        $arr['slug'] = [
+            'class'=>SluggableBehavior::className(),
+            'attribute'=>'name',
+            'ensureUnique'=>true,
+            'immutable'=>true
         ];
+        return $arr;
     }
 
     /**
