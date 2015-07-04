@@ -31,13 +31,11 @@ class PageMeta extends MetaFields
             ],
             "slug" => [
                 "definition" => [
-                    "class" => \common\db\fields\TextField::className(),
+                    "class" => \common\db\fields\SlugField::className(),
                     "title" => Yii::t('common', 'Slug'),
+                    "isRequired" => true,
                     "showInGrid" => true,
-                    //"showInView" => false,
-                    "showInFilter" => true,
-                    "isRequired" => false,
-                    "editInGrid" => false,
+                    "generateFrom" => "name",
                 ],
                 "params" => [$this->owner, "slug"]
             ],

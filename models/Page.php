@@ -45,21 +45,6 @@ class Page extends \common\db\ActiveRecord
 
     /**
      * @inheritdoc
-     */
-    public function behaviors()
-    {
-        $arr = parent::behaviors();
-        $arr['slug'] = [
-            'class'=>SluggableBehavior::className(),
-            'attribute'=>'name',
-            'ensureUnique'=>true,
-            'immutable'=>true
-        ];
-        return $arr;
-    }
-
-    /**
-     * @inheritdoc
 
     public function rules()
     {
