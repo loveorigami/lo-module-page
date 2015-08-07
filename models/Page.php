@@ -3,9 +3,7 @@
 namespace lo\modules\page\models;
 
 use Yii;
-use yii\behaviors\SluggableBehavior;
 
-use lo\modules\page\meta\PageMeta;
 
 /**
  * This is the model class for table "page".
@@ -19,7 +17,7 @@ use lo\modules\page\meta\PageMeta;
  * @property integer $created_at
  * @property integer $updated_at
  */
-class Page extends \common\db\ActiveRecord
+class Page extends \lo\core\db\ActiveRecord
 {
 
     use \common\rbac\ConstraintTrait;

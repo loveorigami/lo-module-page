@@ -1,7 +1,7 @@
 <?php
 
-use backend\widgets\Grid;
-use backend\widgets\CrudLinks;
+use lo\core\admin\widgets\Grid;
+use lo\core\admin\widgets\CrudLinks;
 
 $this->title = Yii::t('backend', 'Pages');
 $this->params['breadcrumbs'][] = $this->title;

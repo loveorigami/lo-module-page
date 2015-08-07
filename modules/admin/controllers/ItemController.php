@@ -5,7 +5,7 @@ namespace lo\modules\page\modules\admin\controllers;
 use Yii;
 use lo\modules\page\models\Page;
 use yii\web\Controller;
-use common\actions\crud;
+use lo\core\actions\crud;
 
 /**
  * PageController implements the CRUD actions for Page model.
