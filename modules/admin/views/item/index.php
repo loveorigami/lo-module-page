@@ -8,12 +8,8 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="page-index">
 
+    <?=CrudLinks::widget(["action"=>CrudLinks::CRUD_LIST, "model"=>$model])?>
     <?= $this->render('_filter', ['model' => $searchModel]); ?>
-
-    <hr/>
-    <p>
-        <?=CrudLinks::widget(["action"=>CrudLinks::CRUD_LIST, "model"=>$model])?>
-    </p>
 
     <?php
 
