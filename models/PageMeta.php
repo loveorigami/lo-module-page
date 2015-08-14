@@ -42,10 +42,19 @@ class PageMeta extends MetaFields
             "text" => [
                 "definition" => [
                     "class" => \lo\core\db\fields\HtmlField::className(),
+                    "inputClass" =>[
+                        'class'=>'lo\core\inputs\HtmlInput',
+                        "fileManagerController"=>['elfinder', 'path' => 'page'],
+                    ],
                     "title" => Yii::t('common', 'Text'),
                     "showInGrid" => false,
                     "isRequired" => true,
-                    //"fileManagerController"=>['elfinder', 'path' => 'img'],
+                    "widgetOptions"=>[
+                        'editorOptions'=>[
+                            'preset' => 'basic',
+                        ]
+                    ],
+                   //
                 ],
                 "params" => [$this->owner, "text"]
             ],
