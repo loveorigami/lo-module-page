@@ -7,8 +7,7 @@ $this->title = Yii::t('backend', 'Pages');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="page-index">
-
-    <?=CrudLinks::widget(["action"=>CrudLinks::CRUD_LIST, "model"=>$model])?>
+    <?=CrudLinks::widget(["action"=>CrudLinks::CRUD_LIST, "model"=>$searchModel])?>
     <?= $this->render('_filter', ['model' => $searchModel]); ?>
 
     <?php
