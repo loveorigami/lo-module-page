@@ -1,6 +1,6 @@
 <?php
-use lo\core\admin\widgets\Detail;
-use lo\core\admin\widgets\CrudLinks;
+use lo\core\widgets\admin\Detail;
+use lo\core\widgets\admin\CrudLinks;
 
 /**
  * @var yii\web\View $this

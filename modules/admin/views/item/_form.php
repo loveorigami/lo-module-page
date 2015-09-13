@@ -1,6 +1,6 @@
 <?php
 
-use lo\core\admin\widgets\Form;
+use lo\core\widgets\admin\Form;
 
 /**
  * @var common\models\Page $model модель

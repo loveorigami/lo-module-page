@@ -1,5 +1,5 @@
 <?php
-use lo\core\admin\widgets\ExtFilter;
+use lo\core\widgets\admin\ExtFilter;
 
 /**
  * @var yii\web\View $this
