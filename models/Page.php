@@ -3,6 +3,7 @@
 namespace lo\modules\page\models;
 
 use Yii;
+use lo\modules\import\models\ICsvImportable;
 
 
 /**
@@ -17,7 +18,7 @@ use Yii;
  * @property integer $created_at
  * @property integer $updated_at
  */
-class Page extends \lo\core\db\ActiveRecord
+class Page extends \lo\core\db\ActiveRecord implements ICsvImportable
 {
 
     use \lo\core\rbac\ConstraintTrait;
@@ -67,8 +68,23 @@ class Page extends \lo\core\db\ActiveRecord
             'name' => Yii::t('common', 'Name'),
             'text' => Yii::t('common', 'Text'),
             'status' => Yii::t('common', 'Active'),
+            'author_id' => Yii::t('common', 'Author'),
+            'updater_id' => Yii::t('common', 'Updater'),
             'created_at' => Yii::t('common', 'Created At'),
             'updated_at' => Yii::t('common', 'Updated At'),
         ];
+    }
+
+    /**
+     * Возвращает массив атрибутов доступных для импорта из csv
+     * @return array
+     */
+    public function getCsvAttributes()
+    {
+        $attrs = array_keys($this->getAttributes( null, ['updated_at', 'updater_id'])); // пропустить
+       // $attrs[] = "id";
+        //$attrs[] = "confirm_password";
+        return $attrs;
+
     }
 }
