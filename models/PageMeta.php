@@ -46,15 +46,16 @@ class PageMeta extends MetaFields
                         'class'=>'lo\core\inputs\HtmlInput',
                         "fileManagerController"=>['elfinder', 'path' => 'page'],
                     ],
+                    "inputClassOptions" => [
+                        "widgetOptions"=>[
+                            'editorOptions'=>[
+                                'preset' => 'standard',
+                            ]
+                        ],
+                    ],
                     "title" => Yii::t('common', 'Text'),
                     "showInGrid" => false,
                     "isRequired" => true,
-                    "widgetOptions"=>[
-                        'editorOptions'=>[
-                            'preset' => 'basic',
-                        ]
-                    ],
-                   //
                 ],
                 "params" => [$this->owner, "text"]
             ],
