@@ -44,21 +44,6 @@ class Page extends \lo\core\db\ActiveRecord implements ICsvImportable
 
     /**
      * @inheritdoc
-
-    public function rules()
-    {
-        return [
-            [['name', 'text'], 'required'],
-            [['text'], 'string'],
-            [['status'], 'integer'],
-            [['slug'], 'unique'],
-            [['slug'], 'string', 'max' => 2048],
-            [['name'], 'string', 'max' => 512],
-        ];
-    }
-*/
-    /**
-     * @inheritdoc
      */
     public function attributeLabels()
     {
@@ -86,5 +71,11 @@ class Page extends \lo\core\db\ActiveRecord implements ICsvImportable
         //$attrs[] = "confirm_password";
         return $attrs;
 
+    }
+
+    public function getCsvCallbacks(){
+        return  [
+            'status' => 'iStatus'
+        ];
     }
 }
