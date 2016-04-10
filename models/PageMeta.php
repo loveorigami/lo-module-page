@@ -44,12 +44,12 @@ class PageMeta extends MetaFields
                     "class" => \lo\core\db\fields\HtmlField::className(),
                     "inputClass" =>[
                         'class'=>'lo\core\inputs\HtmlInput',
-                        "fileManagerController"=>['elfinder', 'path' => 'page'],
+                        "path"=>'page',
                     ],
                     "inputClassOptions" => [
                         "widgetOptions"=>[
                             'editorOptions'=>[
-                                'preset' => 'standard',
+                                'preset' => 'full',
                             ]
                         ],
                     ],
