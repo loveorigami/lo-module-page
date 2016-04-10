@@ -44,7 +44,7 @@ class PageMeta extends MetaFields
                     "class" => \lo\core\db\fields\HtmlField::className(),
                     "inputClass" =>[
                         'class'=>'lo\core\inputs\HtmlInput',
-                        'folder' => 'page',
+                        'path' => 'page',
                     ],
                     "inputClassOptions" => [
                         "widgetOptions"=>[
