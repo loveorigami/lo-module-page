@@ -39,7 +39,7 @@ class Page extends \lo\core\db\ActiveRecord implements ICsvImportable
      */
     public function metaClass()
     {
-        return PageMeta::className();
+        return PageMeta::class;
     }
 
     /**

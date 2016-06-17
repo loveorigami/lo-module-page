@@ -20,7 +20,7 @@ class PageMeta extends MetaFields
         return [
             "name" => [
                 "definition" => [
-                    "class" => \lo\core\db\fields\TextField::className(),
+                    "class" => \lo\core\db\fields\TextField::class,
                     "title" => Yii::t('common', 'Name'),
                     "showInGrid" => true,
                     "showInFilter" => true,
@@ -31,7 +31,7 @@ class PageMeta extends MetaFields
             ],
             "slug" => [
                 "definition" => [
-                    "class" => \lo\core\db\fields\SlugField::className(),
+                    "class" => \lo\core\db\fields\SlugField::class,
                     "title" => Yii::t('common', 'Slug'),
                     "isRequired" => true,
                     "showInGrid" => true,
@@ -41,7 +41,7 @@ class PageMeta extends MetaFields
             ],
             "text" => [
                 "definition" => [
-                    "class" => \lo\core\db\fields\HtmlField::className(),
+                    "class" => \lo\core\db\fields\HtmlField::class,
                     "inputClass" =>[
                         'class'=>'lo\core\inputs\HtmlInput',
                         'path' => 'page',
